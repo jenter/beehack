@@ -1,0 +1,109 @@
+/* Default hidden elements :: hidden  */
+.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--do-not-stack-on-mobile,
+.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--row-background-image,
+.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--padding,
+.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--border ,
+.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--full-width-on-mobile,
+.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--dynamic-image,
+.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .item_1.basic-spacer-bg > span.ng-isolate-scope,
+.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .image-selector-container > div.widget:last-child, 
+table#contentTable .module-box .icon-move,
+table#contentTable .module-box > ul.edit-icons,
+table#contentTable .row-container > ul.edit-icons,
+.top-bar ul li.canvas--top-bar--save-as-template,
+.top-bar ul li.canvas--top-bar--show-structure,
+.right-bar .properties-panel__title > a.icon-delete,
+.right-bar .properties-panel__title > a.icon-duplicate,
+.canvas--tab-pane--content-properties .modules-wrapper .panel--module,
+.canvas--tab-pane--row-properties .rows-wrapper > .canvas--widget-type
+{
+	display: none;
+}
+
+/* Default hidden elements :: visible  */
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--do-not-stack-on-mobile,
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--row-background-image,
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--padding,
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--border ,
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--full-width-on-mobile,
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--dynamic-image,
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .item_1.basic-spacer-bg > span.ng-isolate-scope,
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .image-selector-container > div.widget:last-child, 
+body.bee-editor-advanced-user  table#contentTable .module-box .icon-move,
+body.bee-editor-advanced-user  table#contentTable .module-box > ul.edit-icons,
+body.bee-editor-advanced-user  table#contentTable .row-container > ul.edit-icons,
+body.bee-editor-advanced-user  .top-bar ul li.canvas--top-bar--show-structure,
+body.bee-editor-advanced-user  .top-bar ul li.canvas--top-bar--save-as-template,
+body.bee-editor-advanced-user  .right-bar .properties-panel__title > a.icon-delete,
+body.bee-editor-advanced-user  .right-bar .properties-panel__title > a.icon-duplicate,
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .modules-wrapper .panel--module,
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .rows-wrapper > .canvas--widget-type
+{
+	display: inherit;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+
+/* Adding custom content properties based on hidden elements :: hidden */
+
+.canvas--tab-pane--content-properties .modules-wrapper:after {
+	content: 'Select an element to see interact with content options.';
+	padding: 20px;
+	position: relative;
+}
+
+.canvas--tab-pane--row-properties .rows-wrapper:after {
+	content: 'Select an element to see interact with row options.';
+	padding: 20px;
+	position: relative;
+}
+
+/* Adding custom content properties based on hidden elements :: visible */
+
+body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .modules-wrapper:after,
+body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .rows-wrapper:after 
+{
+    content: initial; 
+    padding: inherit;
+    position: inherit;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+
+/* Adjusted tab updates :: hidden */
+
+.right-bar .tabset > ul.nav-tabs > li:last-child > a {
+	display: none;
+}
+
+.right-bar .tabset > ul.nav-tabs {
+	background: #d6d9dc;
+	min-height: 49px;
+}
+
+.right-bar .tabset > ul.nav-tabs > li > a {
+	border-right: 1px solid #c0c5c9;
+}
+
+.right-bar .tabset > ul.nav-tabs > li:first-child > a {
+	border-right: none;
+}
+
+/* Adjusted tab updates :: visible */
+
+body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+    display: inherit;
+}
+
+body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs {
+	background: #d6d9dc;
+	min-height: inherit;
+}
+
+body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li > a {
+	border-right: 1px solid rgb(192, 197, 201);
+}
+
+body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+    border-right: none;
+}
