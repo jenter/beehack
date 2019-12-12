@@ -1,0 +1,3 @@
+.pull-right .row-properties-panel-container .widgets-section__wrapper:nth-of-type(1) > .ng-scope:nth-of-type(3) {
+    border: 2px dotted green;
+}
