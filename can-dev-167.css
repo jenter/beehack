@@ -1,109 +1,237 @@
-/* Default hidden elements :: hidden  */
-.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--do-not-stack-on-mobile,
-.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--row-background-image,
-.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--padding,
-.canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--border ,
-.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--full-width-on-mobile,
-.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--dynamic-image,
-.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .item_1.basic-spacer-bg > span.ng-isolate-scope,
-.canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .image-selector-container > div.widget:last-child, 
-table#contentTable .module-box .icon-move,
-table#contentTable .module-box > ul.edit-icons,
-table#contentTable .row-container > ul.edit-icons,
-.top-bar ul li.canvas--top-bar--save-as-template,
-.top-bar ul li.canvas--top-bar--show-structure,
-.right-bar .properties-panel__title > a.icon-delete,
-.right-bar .properties-panel__title > a.icon-duplicate,
-.canvas--tab-pane--content-properties .modules-wrapper .panel--module,
-.canvas--tab-pane--row-properties .rows-wrapper > .canvas--widget-type
-{
-	display: none;
+/* 
+* * * * * * * * * * * * * * * * * * * * * * * * *
+Custom hack file for CANDEV-167 
+* * * * * * * * * * * * * * * * * * * * * * * * *
+*/
+
+/* Do not stack on mobile (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .row-display-flow-container {
+    display: none;
 }
 
-/* Default hidden elements :: visible  */
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--do-not-stack-on-mobile,
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--row-background-image,
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--padding,
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .canvas--section-widget .canvas--widget-type--border ,
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--full-width-on-mobile,
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--dynamic-image,
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .item_1.basic-spacer-bg > span.ng-isolate-scope,
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .canvas--section-widget .canvas--widget-type--url .image-selector-container > div.widget:last-child, 
-body.bee-editor-advanced-user  table#contentTable .module-box .icon-move,
-body.bee-editor-advanced-user  table#contentTable .module-box > ul.edit-icons,
-body.bee-editor-advanced-user  table#contentTable .row-container > ul.edit-icons,
-body.bee-editor-advanced-user  .top-bar ul li.canvas--top-bar--show-structure,
-body.bee-editor-advanced-user  .top-bar ul li.canvas--top-bar--save-as-template,
-body.bee-editor-advanced-user  .right-bar .properties-panel__title > a.icon-delete,
-body.bee-editor-advanced-user  .right-bar .properties-panel__title > a.icon-duplicate,
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .modules-wrapper .panel--module,
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .rows-wrapper > .canvas--widget-type
-{
-	display: inherit;
-}
-
-/* //////////////////////////////////////////////////////////////////// */
-
-/* Adding custom content properties based on hidden elements :: hidden */
-
-.canvas--tab-pane--content-properties .modules-wrapper:after {
-	content: 'Select an element to see interact with content options.';
-	padding: 20px;
-	position: relative;
-}
-
-.canvas--tab-pane--row-properties .rows-wrapper:after {
-	content: 'Select an element to see interact with row options.';
-	padding: 20px;
-	position: relative;
-}
-
-/* Adding custom content properties based on hidden elements :: visible */
-
-body.bee-editor-advanced-user  .canvas--tab-pane--content-properties .modules-wrapper:after,
-body.bee-editor-advanced-user  .canvas--tab-pane--row-properties .rows-wrapper:after 
-{
-    content: initial; 
-    padding: inherit;
-    position: inherit;
-}
-
-/* //////////////////////////////////////////////////////////////////// */
-
-/* Adjusted tab updates :: hidden */
-
-.right-bar .tabset > ul.nav-tabs > li:last-child > a {
-	display: none;
-}
-
-.right-bar .tabset > ul.nav-tabs {
-	background: #d6d9dc;
-	min-height: 49px;
-}
-
-.right-bar .tabset > ul.nav-tabs > li > a {
-	border-right: 1px solid #c0c5c9;
-}
-
-.right-bar .tabset > ul.nav-tabs > li:first-child > a {
-	border-right: none;
-}
-
-/* Adjusted tab updates :: visible */
-
-body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+body.bee-editor-advanced-user .right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .row-display-flow-container {
     display: inherit;
 }
 
-body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs {
-	background: #d6d9dc;
-	min-height: inherit;
+/* Background image (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .background-image-container {
+    display: none;
 }
 
-body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li > a {
-	border-right: 1px solid rgb(192, 197, 201);
+body.bee-editor-advanced-user .right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .background-image-container {
+    display: inherit;
 }
 
-body.bee-editor-advanced-user  .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+/* Padding (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .padding-container {
+    display: none;
+}
+
+body.bee-editor-advanced-user  .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .padding-container {
+    display: inherit;
+}
+
+/* Border (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .border-container {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .border-container {
+    display: inherit;
+}
+
+/* Full width on mobile (image) */  
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] label[for="fullwidthOnMobile"] {
+    display: none;
+}
+
+body.bee-editor-advanced-user .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] label[for="fullwidthOnMobile"] {
+    display: inherit;
+}
+
+/* Dynamic image (image) */  
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .dynamic-image-container {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .dynamic-image-container {
+    display: inherit;
+}
+
+/* Image: content properties - Url */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .image-selector-container  > div.widget:last-child {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .image-selector-container  > div.widget:last-child {
+    display: inherit;
+}
+
+/* Padding: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] div[mailup-bee-common-widgets-padding] {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] div[mailup-bee-common-widgets-padding] {
+    display: inherit;
+}
+
+/* Hide content on mobile: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-hide-content-on-mobile] {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-hide-content-on-mobile] {
+    display: inherit;
+}
+
+/* Border attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border] {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border] {
+    display: inherit;
+}
+
+/* Line Height attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-line-height]  {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-line-height] {
+    display: inherit;
+}
+
+/* Border Radius attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border-radius] {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border-radius] {
+    display: inherit;
+}
+
+/* Move icon (module) */
+body:not(.bee-editor-advanced-user) .left-bar table#contentTable .module-box > .icon-move {
+    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* Move icon (row) */
+body:not(.bee-editor-advanced-user) .left-bar table#contentTable .row-container > .icon-move { 
+    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* Edit Icons (module) */
+.left-bar table#contentTable .module-box.selected > ul.edit-icons {
+    display: none;
+}
+
+body.bee-editor-advanced-user .left-bar table#contentTable .module-box.selected > ul.edit-icons {
+    display: inherit;
+}
+
+/* Edit Icons (row) */
+.left-bar table#contentTable .row-container > ul.edit-icons {
+    display: none;
+}
+
+body.bee-editor-advanced-user .left-bar table#contentTable .row-container > ul.edit-icons {
+    display: inherit;
+}
+
+/* Save as template (top-bar) */
+.container-fluid > .top-bar ul.dropdown-menu > li:not(:first-child) {
+    display: none;
+}
+
+body.bee-editor-advanced-user .container-fluid > .top-bar ul.dropdown-menu > li:not(:first-child) {
+    display: inherit;
+}
+
+/* Show Structure (top-bar) */
+.container-fluid > .top-bar .structure-action {
+    display: none;
+}
+
+body.bee-editor-advanced-user .container-fluid > .top-bar .structure-action {
+    display: inherit;
+}
+
+/* Delete Icon (title bar) */
+.right-bar .properties-panel > .properties-panel__title a.icon-delete {
+    display: none;
+}
+
+body.bee-editor-advanced-user .properties-panel > .properties-panel__title a.icon-delete {
+    display: inherit;
+}
+
+/* Duplicate Icon (title bar) */
+.right-bar .properties-panel > .properties-panel__title a.icon-duplicate {
+    display: none;
+}
+
+body.bee-editor-advanced-user .right-bar .properties-panel > .properties-panel__title a.icon-duplicate {
+    display: inherit;
+}
+
+/* Default Content container */
+
+.right-bar .widget-bar .dist-modules > .comp-tree-nodes > div.panel.panel--default.panel--module  {  
+    display: none;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .widget-bar .dist-modules:after {
+    content: 'Select an element to see interact with content options.';
+    padding: 20px;
+    position: relative;
+}
+
+body.bee-editor-advanced-user .right-bar .widget-bar .dist-modules > .comp-tree-nodes > div.panel.panel--default.panel--module  {  
+    display: inherit;
+}
+
+/* Default Rows container */
+
+.right-bar .panel-scroll-container .rows-wrapper > .comp-tree div[ng-model="availableRows"] > .panel--row {  
+    display: none;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .panel-scroll-container .rows-wrapper > .comp-tree div[ng-model="availableRows"]:after {
+    content: 'Select an element to see interact with row options.';
+    padding: 20px;
+    position: relative;
+}
+
+body.bee-editor-advanced-user .right-bar .panel-scroll-container .rows-wrapper > .comp-tree div[ng-model="availableRows"] > .panel--row {  
+    display: inherit;
+}
+
+/* Default top right sidebar tabs */
+
+body:not(.bee-editor-advanced-user)  .right-bar .tabset > ul.nav-tabs {
+    background: #d6d9dc;
+    min-height: 46px;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .tabset > ul.nav-tabs > li:first-child > a {
     border-right: none;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .tabset > ul.nav-tabs > li > a {
+    border-right: 1px solid #c0c5c9;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+    position: absolute;
+    top: -9999px;
+    height: 1px;
+    overflow: hidden;
 }

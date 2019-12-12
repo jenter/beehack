@@ -1,3 +1,132 @@
-.pull-right .row-properties-panel-container .widgets-section__wrapper:nth-of-type(1) > .ng-scope:nth-of-type(3) {
-    border: 2px dotted green;
+/* 
+* * * * * * * * * * * * * * * * * * * * * * * * *
+Target File to show UI with CSS hack file for CANDEV-167 
+* * * * * * * * * * * * * * * * * * * * * * * * *
+*/
+
+/* Do not stack on mobile (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .row-display-flow-container {
+    border: 2px dotted orange;
 }
+
+/* Background image (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] div[ng-repeat="section in widgetsRows"] .background-image-container {
+    border: 2px dotted orange;
+}
+
+/* Padding (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .padding-container {
+    border: 2px dotted orange;
+}
+
+/* Border (row) */
+.right-bar .row-properties-panel-container div[target=selectedTarget] .widgets-section__wrapper:not([ng-repeat="section in widgetsRows"]) .border-container {
+    border: 2px dotted orange;
+}
+
+/* Full width on mobile (image) */  
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] label[for="fullwidthOnMobile"] {
+    border: 2px dotted orange;
+}
+
+/* Dynamic image (image) */  
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .dynamic-image-container {
+    border: 2px dotted orange;
+}
+
+/* Image: content properties - Url */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] .image-selector-container  > div.widget:last-child {
+    border: 2px dotted orange;
+}
+
+/* Padding: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"] div[mailup-bee-common-widgets-padding] {
+    border: 2px dotted orange;
+}
+
+/* Hide content on mobile: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-hide-content-on-mobile] {
+    border: 2px dotted orange;
+}
+
+/* Border attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border] {
+    border: 2px dotted orange;
+}
+
+/* Line Height attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-line-height]  {
+    border: 2px dotted orange;
+}
+
+/* Border Radius attributes: (button, img, etc) */
+.right-bar .module-properties-panel-container div[target=selectedTarget] .widgets-section div[ng-repeat="section in widgetsRows"]  div[mailup-bee-common-widgets-border-radius] {
+    border: 2px dotted orange;
+}
+
+/* Move icon (module) */
+body:not(.bee-editor-advanced-user) .left-bar table#contentTable .module-box > .icon-move {
+    border: 2px dotted orange;
+}
+
+/* Move icon (row) */
+body:not(.bee-editor-advanced-user) .left-bar table#contentTable .row-container > .icon-move { 
+    border: 2px dotted orange;
+}
+
+/* Edit Icons (module) */
+.left-bar table#contentTable .module-box.selected > ul.edit-icons {
+    border: 2px dotted orange;
+}
+
+/* Edit Icons (row) */
+.left-bar table#contentTable .row-container > ul.edit-icons {
+    border: 2px dotted orange;
+}
+
+/* Save as template (top-bar) */
+.container-fluid > .top-bar ul.dropdown-menu > li:not(:first-child) {
+    border: 2px dotted orange;
+}
+
+/* Show Structure (top-bar) */
+.container-fluid > .top-bar .structure-action {
+    border: 2px dotted orange;
+}
+
+/* Delete Icon (title bar) */
+.right-bar .properties-panel > .properties-panel__title a.icon-delete {
+    border: 2px dotted orange;
+}
+
+/* Duplicate Icon (title bar) */
+.right-bar .properties-panel > .properties-panel__title a.icon-duplicate {
+    border: 2px dotted orange;
+}
+
+/* Default Content container */
+
+.right-bar .widget-bar .dist-modules > .comp-tree-nodes > div.panel.panel--default.panel--module  {  
+    border: 2px dotted orange;
+}
+
+body:not(.bee-editor-advanced-user) .right-bar .widget-bar .dist-modules:after {
+    content: 'Select an element to see interact with content options.';
+    color: orange;
+}
+
+/* Default Rows container */
+
+.right-bar .panel-scroll-container .rows-wrapper > .comp-tree div[ng-model="availableRows"] > .panel--row {  
+    border: 2px dotted orange;
+}
+
+body .right-bar .panel-scroll-container .rows-wrapper > .comp-tree div[ng-model="availableRows"]:after {
+    content: 'Select an element to see interact with row options.';
+    color: orange;
+}
+
+/* Default top right sidebar tabs */
+body .right-bar .tabset > ul.nav-tabs > li:last-child > a {
+    border: 2px dotted orange;
+}  
